@@ -1,0 +1,61 @@
+@import '_colors';
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+#header {
+  text-transform: uppercase;
+  margin-bottom: 0;
+  background-color: $main-coloer;
+  color: $light-blue;
+  small {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-size: 1em;
+  }
+  h1 {
+    font-size: 72px;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid;
+    margin-bottom: 1rem;
+  }
+  h4 {
+    letter-spacing: 5px;
+  }
+  .profile-image {
+    width: 200px;
+    border-radius: 100%;
+    overflow: hidden;
+    border: 3px solid #fff;
+  }
+}
+
+#navigation {
+  padding: 0;
+  background-color: $orange;
+  .navbar-toggler {
+    border: 1.5px solid rgba(255,255,255, 0.5);
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+      }
+  }
+  .nav-item {
+    .nav-link {
+      color: $light-blue;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      padding: 1rem 1rem;
+      &:hover {
+        font-size: 1.0rem;
+        background-color: rgb(181, 71, 41);
+      }
+    }
+  }
+}
