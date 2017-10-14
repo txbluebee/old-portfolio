@@ -1,10 +1,16 @@
 @import '_colors';
 
+* {
+  // border: 1px solid black;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
+  color: $main-coloer;
 }
 
 #header {
@@ -57,5 +63,152 @@ body {
         background-color: rgb(181, 71, 41);
       }
     }
+  }
+}
+
+.block {
+  padding-top: 3.5rem;
+  padding-bottom: 2rem;
+  .block-main {
+    padding-left: 3rem;
+    h2 {
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      letter-spacing: 1.5px;
+      color: $main-coloer;
+    }
+  }
+  p {
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.5px;
+    margin-bottom: 0;
+  }
+  h5 {
+    letter-spacing: 1px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+}
+
+.sub-block {
+  .block-item {
+    display: flex;
+    .year {
+      flex: 2;
+      padding-right: 1.5rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      span {
+        font-weight: 400;
+        font-size: 1rem;
+        letter-spacing: 1px;
+      }
+    }
+    .sub-block-content {
+      padding-left: 1.5rem;
+      flex: 8;
+      border-left: 1px solid;
+      position: relative;
+      .circle {
+        position: absolute;
+        height: 10px;
+        width: 10px;
+        border: 2px solid;
+        border-radius: 100%;
+        top: -5px;
+        left: -5.5px;
+        background: #fff;
+        overflow: hidden;
+      }
+      h6 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 0;
+      }
+      .company {
+        font-size: 1rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+      ul {
+        padding: 0;
+        margin-top: 0.5rem;
+        margin-left:15px;
+        list-style-type: disc;
+        li {
+          line-height: 1.2;
+        }
+      }
+    }
+  }
+}
+
+#profile {
+  background: $light-blue;
+  .btn-resume {
+    a {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      color: $main-coloer;
+      border: 1px solid $main-coloer;
+      text-decoration: none;
+      &:hover {
+        background-color: rgba(64, 73, 105,0.1);
+      }
+    }
+  }
+  // Skills Bar
+  .skills {
+    margin-top: 1rem;
+    ul {
+      font-family: 'Roboto', sans-serif;
+      padding: 0;
+      margin-top: 1rem;
+      margin-bottom: 0;
+      li {
+        font-size: 0.9rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+        margin-top: 0.25rem;
+        .bar {
+          width: 90%;
+          height: 10px;
+          border: 1px solid $main-coloer;
+          background: $light-blue;
+          border-radius: 10px;
+          overflow: hidden;
+          margin: 2.5px 0;
+            .value {
+              width: 90%;
+              height: 100%;
+              background: $main-coloer;
+            }
+            .v95 {
+              width: 95%;
+            }
+            .v85 {
+              width: 85%;
+            }
+            .v80 {
+              width: 80%;
+            }
+            .v70 {
+              width: 70%;
+            }
+        }
+      }
+    }
+  }
+}
+
+#education {
+  background: $light-blue;
+  .sub-block-content {
+    padding-bottom: 1rem;
   }
 }
