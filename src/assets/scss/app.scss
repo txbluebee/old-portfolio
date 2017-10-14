@@ -16,7 +16,9 @@ body {
 #header {
   text-transform: uppercase;
   margin-bottom: 0;
-  background-color: $main-coloer;
+  background-image: url(./../media/bg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
   color: $light-blue;
   small {
     margin-top: 1em;
@@ -41,6 +43,8 @@ body {
     border: 3px solid #fff;
   }
 }
+
+
 
 #navigation {
   padding: 0;
@@ -251,4 +255,33 @@ body {
 #footer {
   background: $main-coloer;
   color: $light-blue;
+  padding-top: 1rem;
+  p {
+    margin-top: 5px;
+  }
+  .btn-resume {
+    a {
+      display: inline-block;
+      padding: 0.4rem 1rem;
+      color: $light-blue;
+      border: 1px solid $light-blue;
+      text-decoration: none;
+      &:hover {
+        background-color: rgba(64, 73, 105,0.1);
+      }
+    }
+  }
+  .social-icons {
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+    justify-content: center;
+    li {
+      margin-right: 1rem;
+      a {
+        color: $light-blue;
+      }
+    }
+
+  }
 }
