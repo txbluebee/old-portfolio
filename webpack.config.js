@@ -4,9 +4,12 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-const extractPlugin = new ExtractTextPlugin({ filename: './assets/css/[name].css' });
+const extractPlugin = new ExtractTextPlugin({
+  filename: './assets/css/[name].css'});
 
 const config = {
+
+
   context: path.resolve(__dirname, 'src'),
 
   entry: {
@@ -41,17 +44,18 @@ const config = {
             {
               loader: 'css-loader',
               options: {
-                sourceMap: true,
-                url: false
+                sourceMap: true
               }
             },
+            'resolve-url-loader',
             {
               loader: 'sass-loader',
               options: {
-                sourceMap: false
+                sourceMap: true
               }
             }
           ],
+          publicPath: '../../',
           fallback: 'style-loader'
         })
       },
@@ -67,6 +71,13 @@ const config = {
             }
           }
         ]
+        // use: [
+        //   {
+        //     loader: 'url-loader',
+        //     options: {limit: 40000}
+        //   },
+        //   'image-webpack-loader'
+        // ]
       },
       // file-loader(for fonts)
       { test: /\.(woff|woff2|eot|ttf|otf)$/, use: ['file-loader'] }
@@ -96,7 +107,7 @@ const config = {
     // static files served from here
     contentBase: path.resolve(__dirname, "./dist/assets/media"),
     compress: true,
-    port: 8080,
+    port: 8000,
     stats: 'errors-only',
     open: true
   },

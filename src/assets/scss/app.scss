@@ -16,8 +16,8 @@ body {
 #header {
   text-transform: uppercase;
   margin-bottom: 0;
-  background-image: url(./../media/bg.jpg);
-  background-size: cover;
+  background-color: $main-coloer;
+  background: url('../media/bg.jpg');
   background-attachment: fixed;
   color: $light-blue;
   small {
