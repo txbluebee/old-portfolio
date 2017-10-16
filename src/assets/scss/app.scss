@@ -75,6 +75,10 @@ body {
   padding-bottom: 2rem;
   .block-main {
     padding-left: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
     h2 {
       text-transform: uppercase;
       font-size: 1.5rem;
@@ -93,6 +97,25 @@ body {
     text-transform: uppercase;
   }
 }
+
+@media (max-width: 991px) {
+  .block {
+    .block-main {
+      flex-direction: row;
+      justify-content: flex-start;
+      padding-left: 1.2rem;
+      h2 {
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid $main-coloer;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+
+
+
 
 .sub-block {
   .block-item {
@@ -164,6 +187,19 @@ body {
       &:hover {
         background-color: rgba(64, 73, 105,0.1);
       }
+    }
+  }
+  .btn-lg-resume {
+    display: none;
+  }
+  @media (max-width: 991px) {
+    .btn-resume {
+      display: none;
+    }
+    .btn-lg-resume {
+      display: block;
+      margin-left: 1rem;
+      margin-top: 1.3rem;
     }
   }
   // Skills Bar
@@ -282,6 +318,15 @@ body {
         color: $light-blue;
       }
     }
-
+  }
+  @media (max-width: 991px){
+    .social-icons {
+      justify-content: flex-start;
+    }
+    .btn-resume {
+      a {
+        padding: 0.2rem 1rem;
+      }
+    }
   }
 }
