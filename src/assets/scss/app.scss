@@ -1,5 +1,20 @@
 @import '_colors';
 
+@mixin sm-screen {
+  @media (max-width: 767px){
+    @content
+  }
+};
+
+@mixin md-screen {
+  @media (max-width: 991px){
+    @content
+  }
+};
+
+
+
+
 * {
   // border: 1px solid black;
   box-sizing: border-box;
@@ -53,7 +68,10 @@ body {
     border: 1.5px solid rgba(255,255,255, 0.5);
     .navbar-toggler-icon {
       background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-      }
+    }
+    @include md-screen(){
+      margin: 8px 0 8px 10px;
+    };
   }
   .nav-item {
     .nav-link {
@@ -73,17 +91,30 @@ body {
 .block {
   padding-top: 3.5rem;
   padding-bottom: 2rem;
+  @include md-screen(){
+    min-width: 576px;
+  };
   .block-main {
     padding-left: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+    @include md-screen(){
+      flex-direction: row;
+      justify-content: flex-start;
+      padding-left: 1.2rem;
+    }
     h2 {
       text-transform: uppercase;
       font-size: 1.5rem;
       letter-spacing: 1.5px;
       color: $main-coloer;
+      @include md-screen(){
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid $main-coloer;
+        margin-bottom: 2rem;
+      };
     }
   }
   p {
@@ -97,23 +128,6 @@ body {
     text-transform: uppercase;
   }
 }
-
-@media (max-width: 991px) {
-  .block {
-    .block-main {
-      flex-direction: row;
-      justify-content: flex-start;
-      padding-left: 1.2rem;
-      h2 {
-        padding-bottom: 0.5rem;
-        border-bottom: 2px solid $main-coloer;
-        margin-bottom: 2rem;
-      }
-    }
-  }
-}
-
-
 
 
 
@@ -205,6 +219,9 @@ body {
   // Skills Bar
   .skills {
     margin-top: 1rem;
+    @include md-screen(){
+      margin-top: 1.5rem;
+    }
     ul {
       font-family: 'Roboto', sans-serif;
       padding: 0;
@@ -257,17 +274,15 @@ body {
   a {
     text-decoration: none;
     color: $main-coloer;
-    display: flex;
-    justify-content: center;
   }
 }
 
-
 .project-block {
-  width: 250px;
-  box-shadow: 2.5px 2.5px 2px rgba(64, 73, 105, 0.5);
-  border: 1px solid $main-coloer;
-  margin-bottom: 2rem;
+  margin: 0;
+  box-shadow: 1px 0px 3px rgba(64, 73, 105, 0.5);
+  @include sm-screen(){
+    width: 90%;
+  };
   .project-title {
     padding: 10px 0;
     padding-left: 10px;
@@ -275,6 +290,9 @@ body {
     text-transform: uppercase;
     font-weight: bold;
     color: $orange;
+    @include sm-screen() {
+      font-size: 1.2rem;
+    }
   }
   .project-body {
     img {
@@ -285,6 +303,9 @@ body {
     padding: 10px 0;
     padding-left: 10px;
     font-weight: 500;
+    @include sm-screen() {
+      font-size: 1.2rem;
+    }
   }
 }
 
