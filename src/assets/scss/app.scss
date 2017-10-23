@@ -91,9 +91,6 @@ body {
 .block {
   padding-top: 3.5rem;
   padding-bottom: 2rem;
-  @include md-screen(){
-    min-width: 576px;
-  };
   .block-main {
     padding-left: 3rem;
     display: flex;
@@ -280,9 +277,6 @@ body {
 .project-block {
   margin: 0;
   box-shadow: 1px 0px 3px rgba(64, 73, 105, 0.5);
-  @include sm-screen(){
-    width: 90%;
-  };
   .project-title {
     padding: 10px 0;
     padding-left: 10px;
@@ -313,6 +307,13 @@ body {
   background: $main-coloer;
   color: $light-blue;
   padding-top: 1rem;
+  @include sm-screen(){
+    .col-12 {
+      &:nth-child(1),&:nth-child(2){
+        display: none;
+      }
+    }
+  };
   p {
     margin-top: 5px;
   }
@@ -337,16 +338,6 @@ body {
       margin-right: 1rem;
       a {
         color: $light-blue;
-      }
-    }
-  }
-  @media (max-width: 991px){
-    .social-icons {
-      justify-content: flex-start;
-    }
-    .btn-resume {
-      a {
-        padding: 0.2rem 1rem;
       }
     }
   }
