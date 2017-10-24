@@ -4,3 +4,4 @@ import 'jquery';
 import 'bootstrap'; // importing bootstrap.js
 
 import 'bootstrap/scss/bootstrap.scss'; // bootstrap.scss
+require('./assets/media/favicon.ico');

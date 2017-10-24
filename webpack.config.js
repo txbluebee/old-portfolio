@@ -61,7 +61,7 @@ const config = {
       },
       // file-loader(for images)
       {
-        test: /\.(jpg|png|gif|svg)$/,
+        test: /\.(jpg|ico|png|gif|svg)$/,
         use: [
           {
             loader: 'file-loader',
