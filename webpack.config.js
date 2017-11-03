@@ -19,8 +19,7 @@ const config = {
 
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: './assets/js/[name].bundle.js',
-    publicPath: 'http://localhost:8000/'
+    filename: './assets/js/[name].bundle.js'
   },
 
   module: {
@@ -56,6 +55,7 @@ const config = {
               }
             }
           ],
+          publicPath: '../../',
           fallback: 'style-loader'
         })
       },
