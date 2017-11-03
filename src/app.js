@@ -1,5 +1,6 @@
 import './assets/scss/app.scss';
 import './assets/js/google_map';
+import './assets/js/portfolio';
 import 'jquery';
 import 'bootstrap'; // importing bootstrap.js
 

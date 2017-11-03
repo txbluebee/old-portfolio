@@ -29,13 +29,13 @@ body {
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
-  color: $main-coloer;
+  color: $main-color;
 }
 
 #header {
   text-transform: uppercase;
   margin-bottom: 0;
-  background-color: $main-coloer;
+  background-color: $main-color;
   background: url('../media/bg.jpg');
   background-attachment: fixed;
   color: $light-blue;
@@ -114,10 +114,10 @@ body {
       text-transform: uppercase;
       font-size: 1.5rem;
       letter-spacing: 1.5px;
-      color: $main-coloer;
+      color: $main-color;
       @include md-screen(){
         padding-bottom: 0.5rem;
-        border-bottom: 2px solid $main-coloer;
+        border-bottom: 2px solid $main-color;
         margin-bottom: 2rem;
       };
       @include xs-screen(){
@@ -161,6 +161,7 @@ body {
         font-size: 0.8rem;
         span {
           font-size: 0.8rem;
+          letter-spacing: 0;
         }
       }
     }
@@ -220,8 +221,8 @@ body {
     a {
       display: inline-block;
       padding: 0.5rem 1rem;
-      color: $main-coloer;
-      border: 1px solid $main-coloer;
+      color: $main-color;
+      border: 1px solid $main-color;
       text-decoration: none;
       &:hover {
         background-color: rgba(64, 73, 105,0.1);
@@ -265,7 +266,7 @@ body {
         .bar {
           width: 90%;
           height: 10px;
-          border: 1px solid $main-coloer;
+          border: 1px solid $main-color;
           background: $light-blue;
           border-radius: 10px;
           overflow: hidden;
@@ -273,7 +274,7 @@ body {
             .value {
               width: 90%;
               height: 100%;
-              background: $main-coloer;
+              background: $main-color;
             }
             .v95 {
               width: 95%;
@@ -293,6 +294,7 @@ body {
   }
 }
 
+
 #education {
   background: $light-blue;
   .sub-block-content {
@@ -303,7 +305,25 @@ body {
 #portfolio{
   a {
     text-decoration: none;
-    color: $main-coloer;
+    color: $main-color;
+  }
+}
+
+.project-link {
+  padding: 0;
+  list-style: none;
+  margin-bottom: 2rem;
+  a {
+    display: block;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: $main-color;
+    text-align: center;
+    width: 100px;
+    padding-bottom: 0.3rem;
+    &:hover{
+      border-bottom: 2px solid #cccbcb;
+    }
   }
 }
 
@@ -338,7 +358,7 @@ body {
 }
 
 #footer {
-  background: $main-coloer;
+  background: $main-color;
   color: $light-blue;
   padding-top: 1rem;
   @include sm-screen(){
