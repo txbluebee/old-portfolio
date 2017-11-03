@@ -133,6 +133,7 @@ function displayClickProjects(value){
 
 function displayClickProject(e){
     e.preventDefault();
+    if (e.target.nodeName !== "A"){return};
     const clickValue = e.target.innerText;
     displayClickProjects(clickValue);
 }
