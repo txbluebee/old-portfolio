@@ -6,6 +6,7 @@ import bmiImg from '../media/bmi.png';
 import cameoImg from '../media/cameo.png';
 import travelImg from '../media/taiwantravel.png';
 import reactImg from '../media/reactproject.png';
+import smileImg from '../media/smiles.jpg';
 
 const projects = [
     {
@@ -27,11 +28,11 @@ const projects = [
     },
     {
         id: 3,
-        title: "Question Channel",
-        category: 'JavaScript',
-        imgUrl: questionImg,
-        link: 'https://question-channel.firebaseapp.com/', 
-        content: "Ember JS, Bootstrap 4, Firebase"
+        title: "Miles of Smile",
+        category: 'Ruby',
+        imgUrl: smileImg,
+        link: 'https://miles-of-smiles.herokuapp.com/', 
+        content: "Ruby on Rails, Restful API, SQL"
     },
     {
         id: 4,
@@ -72,7 +73,15 @@ const projects = [
         imgUrl: cameoImg,
         link: 'https://txbluebee.github.io/bootstrap4-landing-page/', 
         content: "HTML, CSS, Bootstrap"
-    }
+    },
+    {
+        id: 9,
+        title: "Question Channel",
+        category: 'JavaScript',
+        imgUrl: questionImg,
+        link: 'https://question-channel.firebaseapp.com/', 
+        content: "Ember JS, Bootstrap 4, Firebase"
+    },
 ];
 
 
@@ -99,7 +108,7 @@ function displayProject(project){
     `
 }
 
-function defaultProjects(e){
+function defaultProjects(){
     let defaultProjects = "";
     projects.forEach(project =>{
         if (parseInt(project.id)<5){
@@ -112,6 +121,21 @@ function defaultProjects(e){
 
 defaultProjects();
 
+const defaultLink = document.querySelector('.default-link');
+
+defaultLink.addEventListener('click', showDefaultProjects);
+
+function showDefaultProjects(e){
+    e.preventDefault();
+    let defaultProjects = "";
+    projects.forEach(project =>{
+        if (parseInt(project.id)<5){
+            defaultProjects += displayProject(project);
+    
+        } 
+    })
+    projectAll.innerHTML = defaultProjects;
+}
 
 // show projects by clicked link
 
