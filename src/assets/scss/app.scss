@@ -313,14 +313,20 @@ body {
   padding: 0;
   list-style: none;
   margin-bottom: 2rem;
+  @include md-screen(){
+    margin-bottom: 1rem;
+  }
   a {
     display: block;
     font-size: 1.2rem;
     text-decoration: none;
     color: $main-color;
     text-align: center;
-    width: 100px;
+    width: 100%;
     padding-bottom: 0.3rem;
+    // @include md-screen(){
+    //   width: 100%;
+    // }
     &:hover{
       border-bottom: 2px solid #cccbcb;
     }
@@ -330,6 +336,9 @@ body {
 .project-block {
   margin: 0;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.5);
+  @include md-screen(){
+    margin: 0.3rem 2rem; 
+  }
   .project-title {
     padding: 10px 0;
     padding-left: 10px;
