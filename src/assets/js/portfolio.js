@@ -7,6 +7,7 @@ import cameoImg from '../media/cameo.png';
 import travelImg from '../media/taiwantravel.png';
 import reactImg from '../media/reactproject.png';
 import smileImg from '../media/smiles.jpg';
+import blstoreImg from '../media/blstore.png';
 
 const projects = [
     {
@@ -36,11 +37,11 @@ const projects = [
     },
     {
         id: 4,
-        title: "Food Planner",
-        category: 'JavaScript',
-        imgUrl: foodplanner,
-        link: 'https://benjpac.github.io/food_planner/', 
-        content: "JavaScript, HTML, CSS"
+        title: "B & L Clothing Store",
+        category: 'Ruby',
+        imgUrl: blstoreImg,
+        link: 'https://blshop.herokuapp.com/', 
+        content: "Ruby on Rails"
     },
     {
         id: 5,
@@ -82,6 +83,14 @@ const projects = [
         link: 'https://question-channel.firebaseapp.com/', 
         content: "Ember JS, Bootstrap 4, Firebase"
     },
+    {
+        id: 10,
+        title: "Food Planner",
+        category: 'JavaScript',
+        imgUrl: foodplanner,
+        link: 'https://benjpac.github.io/food_planner/', 
+        content: "JavaScript, HTML, CSS"
+    }
 ];
 
 
